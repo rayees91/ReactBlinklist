@@ -10,9 +10,9 @@
       "trending": "yes",
       "justAdded": "no",
       "featured": "no",
-      "added": "yes",
+      "added": "no",
       "id": 10,
-      "status": "Finished"
+      "status": "a"
     },
     {
       "imag": "http://127.0.0.1:8887/BringYourHumanToWork.png",
@@ -35,11 +35,11 @@
       "time": " 15-minute read",
       "user": "http://127.0.0.1:8887/user.svg",
       "count": "1.9k reads",
-      "status": "Finished",
+      "status": "a",
       "trending": "yes",
       "justAdded": "no",
       "featured": "yes",
-      "added": "yes",
+      "added": "no",
       "id": 11
     },
     {
@@ -49,11 +49,11 @@
       "time": " 15-minute read",
       "user": "http://127.0.0.1:8887/user.svg",
       "count": "",
-      "status": "Finished",
+      "status": "a",
       "trending": "yes",
       "justAdded": "no",
       "featured": "no",
-      "added": "yes",
+      "added": "no",
       "id": 2
     },
     {

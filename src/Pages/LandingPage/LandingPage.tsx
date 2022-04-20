@@ -1,32 +1,17 @@
+import { Typography } from '@mui/material'
 import React from 'react'
-import App from "../../components/organisms/headers/headers"
-import Typog from "../../components/atoms/Typography/Typog"
-import TabsHeading from '../../components/molecules/Tabs/TabsHeading'
-import Card from '../../components/organisms/Cards/Card'
-import Stack from '@mui/material/Stack';
-import Footer from '../../components/organisms/Footer/Footer'
-import { makeStyles } from '@mui/styles'
-import SearchBar from '../../components/molecules/Search/SearchBar'
-const useStyles = makeStyles({
-  library:{
-    height: 45,
-  },
-});
-const LandingPage=()=> {
+import { useAuth0 } from "@auth0/auth0-react";
+import MyLibrary from "./../MyLibrary/MyLibrary"
+const LandingPage = () => {
+    const { loginWithRedirect } = useAuth0();
+    const Authenticated = useAuth0().isAuthenticated;
   return (
-    <div >      
-      <App/>
-      <br/> 
-      <Stack direction='row' marginLeft={36} marginBottom={5}>
-        <Typog  children="My Library" variant="h3" color="#03314B"/> 
-      </Stack> 
-      {/* <SearchBar/> */}
-      <TabsHeading/> 
-      <br/>
-      {/* <Finished /> */}
-      
-      <Footer/> 
-    </div>       
+    <div>
+        <Typography variant='h1'>Welcome to Blinklist</Typography>
+        <button onClick={() => loginWithRedirect()}>Log In</button>
+        {/* {Authenticated && <MyLibrary/>} */}
+    </div>
   )
 }
-export default LandingPage 
+
+export default LandingPage

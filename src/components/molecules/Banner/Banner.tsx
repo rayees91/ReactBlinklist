@@ -44,7 +44,7 @@ const useStyles = makeStyles({
 const Banner = () => {
   const style = useStyles();
   return (
-    <div >
+    <div data-testid="Banner">
         <Box
               px={{ xs: 8, sm: 7 }}
               py={{ xs: 8, sm: 2 }} 

@@ -21,7 +21,6 @@ import relationship from '../../../images/organisms/relationship.svg'
 import science from '../../../images/organisms/science.svg'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import entrepreneur from '../../../Pages/EntrepreneurPage/EntrepreneurPage'
-
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -74,7 +73,7 @@ const Explore = ()=> {
       setValue(newValue);
     }
     return (
-        <div>
+        <div data-testid="Explore">
             
             <ThemeProvider theme={theme}>
               {/* <Box sx={{ width: '100%' }}> */}

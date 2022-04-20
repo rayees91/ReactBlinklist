@@ -8,7 +8,7 @@ const Accounts= () => {
     <Stack direction="row" spacing={2}>
       <Avatar
         sx={{ bgcolor: lightBlue[500] }}
-        alt="Remy Sharp"
+        alt="Account"
         src="/broken-image.jpg"
       > 
         A
