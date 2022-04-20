@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import MyLibrary from './Pages/MyLibrary/MyLibrary'
+import EntrepreneurPage from './Pages/EntrepreneurPage/EntrepreneurPage'
+import BookDetailPage from './Pages/BookDetailPage/BookDetailPage'
+import LandingPage from './Pages/LandingPage/LandingPage';
+import { useAuth0 } from '@auth0/auth0-react';
+import Test from "./Test"
 function App() {
+  const Authenticated = useAuth0().isAuthenticated;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <>{Authenticated && <Test/>}</>
+    <Router>
+          <Routes>
+            <Route path="/" element={<MyLibrary/>}/>
+            <Route path="/entrepreneur" element={<EntrepreneurPage/>}/>
+            <Route path="/BookDetailPage" element={<BookDetailPage/>}/>
+          </Routes>
+    </Router>
   );
-}
-
+} 
 export default App;
